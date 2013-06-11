@@ -23,5 +23,8 @@ sudo apt-get install ttf-inconsolata
   * sublimecodeintel
   * sublimelinter
 
+### vim
+* just .vimrc for now, I need to add the plugins here soon.
+
 ### zsh 
 * Just my .zshrc file for oh-my-zsh
