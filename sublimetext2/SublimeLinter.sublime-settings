@@ -11,6 +11,13 @@
         "jquery": true,
         "wsh": true,
         "trailing": true,
-        "sub": true
+        "sub": true,
+        "predef":   [
+            "$",
+            "jQuery",
+            "console",
+            "FB",
+            "angular"
+        ]
     }
 }
