@@ -20,9 +20,9 @@ filetype plugin on
 " let g:ctrlp_working_path_mode = ''
 
 " TABBING
-set tabstop=4 
-set softtabstop=4 
-set shiftwidth=4 
+set tabstop=2
+set softtabstop=2
+set shiftwidth=2
 set expandtab     " Tabs are now spaces
 filetype indent on
 
