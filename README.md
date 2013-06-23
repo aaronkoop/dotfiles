@@ -22,6 +22,7 @@ sudo apt-get install ttf-inconsolata
   * docblockr
   * sublimecodeintel
   * sublimelinter
+  * livereload
 
 ### vim
 * just .vimrc for now, I need to add the plugins here soon.
