@@ -9,22 +9,11 @@ map <j> gj                                      " Up and down don't skip lines t
 map <k> gk
 map <leader>s :set spell!<CR>                   " Toggle spell check
 
-" PLUGINS
-" call pathogen#infect()      " For plugin management
-" call pathogen#helptags()    " Call :helptags on each plugin directory
-filetype on
-filetype plugin on
-
-" PLUGINS SPECIFIC
-" let g:EasyMotion_leader_key = '<Leader>'    " Change default from <Leader><Leader>
-" let g:ctrlp_working_path_mode = ''
-
 " TABBING
 set tabstop=2
 set softtabstop=2
 set shiftwidth=2
 set expandtab     " Tabs are now spaces
-filetype indent on
 
 " APPEARANCE
 set cursorline          " highlight the current line
@@ -33,7 +22,7 @@ set ruler               " Lower right corner numbers visible
 set foldmethod=syntax   " Folding behavior
 " color zenburn
 syntax enable
-set t_Co=256            " For color scheme to work in terminal
+" set t_Co=256            " For color scheme to work in terminal
 
 " SEARCHING
 set hlsearch        " Highlight search terms
@@ -46,7 +35,6 @@ set noerrorbells visualbell t_vb=
 autocmd GUIEnter * set visualbell t_vb=
 set nocompatible            " Behave like vim, not vi
 set autochdir               " Automatically change the current directory to current file
-" set shell=/bin/zsh\ -i      " Call alias using the :! directive
 
 " FONTS
 if has("gui_running")
@@ -56,3 +44,17 @@ if has("gui_running")
     set guifont=Consolas:h11:cANSI
   endif
 endif
+
+" PLUGINS SPECIFIC
+let g:EasyMotion_leader_key = '<Leader>'    " Change default from <Leader><Leader>
+
+" VUNDLE
+filetype off
+filetype plugin indent on
+set rtp+=~/.vim/bundle/vundle/
+call vundle#rc()
+Bundle 'gmarik/vundle'
+
+Bundle 'tpope/vim-fugitive'
+Bundle 'Lokaltog/vim-easymotion'
+Bundle 'scrooloose/syntastic'

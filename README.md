@@ -1,18 +1,12 @@
 ## install
 
-At some point I need to redo this properly with symlinking. For the time being, this script will simply copy the dotfiles into their respective directories. This overwrites everything with no backup (except zsh) D:
+At some point I need to redo this properly with symlinking. For the time being, this script will simply copy the dotfiles into their respective directories and install any dependencies. The copying of files will overwrite everything, so please read what this script is doing before you run it!
 
 ```sh
 git clone https://github.com/aakoop/dotfiles.git ~/.dotfiles
 cd ~/.dotfiles
 sh install.sh
 ```
-I also use the inconsolata font in most of my text editors
-
-```sh
-sudo apt-get install ttf-inconsolata
-```
-
 ## components
 
 ### sublimetext2 
@@ -25,7 +19,7 @@ sudo apt-get install ttf-inconsolata
   * livereload
 
 ### vim
-* just .vimrc for now, I need to add the plugins here soon.
+* Plugins are managed through Vundle. Install script will grab all of mine. Add your own to .vimrc and run :BundleInstall.
 
 ### zsh 
 * Just my .zshrc file for oh-my-zsh
