@@ -7,6 +7,13 @@ git clone https://github.com/aakoop/dotfiles.git ~/.dotfiles
 cd ~/.dotfiles
 sh install.sh
 ```
+Optionally, install solarized palette on the terminal so vim terminal solarized works
+```sh
+git clone git://github.com/sigurdga/gnome-terminal-colors-solarized.git
+cd gnome-terminal-colors-solarized
+./solarize
+```
+
 ## components
 
 ### sublimetext2 

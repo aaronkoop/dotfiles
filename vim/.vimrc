@@ -1,3 +1,19 @@
+" VUNDLE
+filetype off
+filetype plugin indent on
+set rtp+=~/.vim/bundle/vundle/
+call vundle#rc()
+Bundle 'gmarik/vundle'
+
+Bundle 'tpope/vim-fugitive'
+Bundle 'Lokaltog/vim-easymotion'
+Bundle 'scrooloose/syntastic'
+Bundle 'altercation/vim-colors-solarized'
+Bundle "pangloss/vim-javascript"
+
+" PLUGINS SPECIFIC
+let g:EasyMotion_leader_key = '<Leader>'    " Change default from <Leader><Leader>
+
 " KEY MAPPINGS
 map <F1> :set hlsearch! hlsearch?<CR>           " Toggle higlight searching
 map <F2> zA                                     " F2 toggles current fold 
@@ -16,13 +32,15 @@ set shiftwidth=2
 set expandtab     " Tabs are now spaces
 
 " APPEARANCE
-set cursorline          " highlight the current line
 set number              " Line numbers visible.
 set ruler               " Lower right corner numbers visible
 set foldmethod=syntax   " Folding behavior
-" color zenburn
+set t_Co=16             " For solarized
 syntax enable
+set background=dark
+colorscheme solarized
 " set t_Co=256            " For color scheme to work in terminal
+set cursorline          " highlight the current line
 
 " SEARCHING
 set hlsearch        " Highlight search terms
@@ -44,17 +62,3 @@ if has("gui_running")
     set guifont=Consolas:h11:cANSI
   endif
 endif
-
-" PLUGINS SPECIFIC
-let g:EasyMotion_leader_key = '<Leader>'    " Change default from <Leader><Leader>
-
-" VUNDLE
-filetype off
-filetype plugin indent on
-set rtp+=~/.vim/bundle/vundle/
-call vundle#rc()
-Bundle 'gmarik/vundle'
-
-Bundle 'tpope/vim-fugitive'
-Bundle 'Lokaltog/vim-easymotion'
-Bundle 'scrooloose/syntastic'
