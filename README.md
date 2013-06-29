@@ -1,7 +1,17 @@
 ## install
 
-At some point I need to redo this properly with symlinking. For the time being, this script will simply copy the dotfiles into their respective directories and install any dependencies. The copying of files will overwrite everything, so please read what this script is doing before you run it!
+Grab the following dependencies if you don't have them:
+```sh
+# For syntastic plugin
+npm -g install jshint                   
 
+# Font I use in most of my text editors
+sudo apt-get install ttf-inconsolata    
+
+# For vim plugin management
+git clone https://github.com/gmarik/vundle.git ~/.vim/bundle/vundle
+```
+Copy the dot files. At some point I need to redo this properly with symlinking. For the time being, this script will simply copy the dotfiles into their respective directories and install any dependencies. The copying of files will overwrite everything, so please read what this script is doing before you run it!
 ```sh
 git clone https://github.com/aakoop/dotfiles.git ~/.dotfiles
 cd ~/.dotfiles
