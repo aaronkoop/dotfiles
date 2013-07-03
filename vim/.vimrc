@@ -8,8 +8,9 @@ Bundle 'gmarik/vundle'
 Bundle 'tpope/vim-fugitive'
 Bundle 'Lokaltog/vim-easymotion'
 Bundle 'scrooloose/syntastic'
-Bundle 'altercation/vim-colors-solarized'
 Bundle "pangloss/vim-javascript"
+Bundle "jnurmine/Zenburn"
+Bundle "kien/ctrlp.vim"
 
 " PLUGINS SPECIFIC
 let g:EasyMotion_leader_key = '<Leader>'    " Change default from <Leader><Leader>
@@ -35,11 +36,9 @@ set expandtab     " Tabs are now spaces
 set number              " Line numbers visible.
 set ruler               " Lower right corner numbers visible
 set foldmethod=syntax   " Folding behavior
-set t_Co=16             " For solarized
 syntax enable
-set background=dark
-colorscheme solarized
-" set t_Co=256            " For color scheme to work in terminal
+set t_Co=256            " For color scheme to work in terminal
+colors zenburn  
 set cursorline          " highlight the current line
 
 " SEARCHING
@@ -61,4 +60,11 @@ if has("gui_running")
   elseif has("gui_win32")
     set guifont=Consolas:h11:cANSI
   endif
+endif
+
+if &term =~ '256color'
+  " Disable Background Color Erase (BCE) so that color schemes
+  " work properly when Vim is used inside tmux and GNU screen.
+  " See also http://snk.tuxfamily.org/log/vim-256color-bce.html
+  set t_ut=
 endif

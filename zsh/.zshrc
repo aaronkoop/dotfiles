@@ -34,25 +34,30 @@ ZSH_THEME="robbyrussell"
 # Example format: plugins=(rails git textmate ruby lighthouse)
 plugins=(git)
 
+#  INIT
 source $ZSH/oh-my-zsh.sh
+. ~/.nvm/nvm.sh
 
-# Customize to your needs...
-export PATH="$HOME/.rbenv/bin:/var/lib/gems/1.8/bin/:$PATH"
-eval "$(rbenv init -)"
+# MISC
+xinput set-prop "VirtualBox mouse integration" "Coordinate Transformation Matrix" 0.5 0 0 0 0.5 0 0 0 1.0 #Fix mint virtual box cursor jump bug
+xinput set-prop "VirtualBox mouse integration" "Coordinate Transformation Matrix" 1.0 0 0 0 1.0 0 0 0 1.0
 
-#History
+# HISTORY
 HISTFILE=~/.zsh_history
 HISTSIZE=1000
 SAVEHIST=1000
+setopt SHARE_HISTORY #Share history between multiple shells
 
-#Vi bindings
-bindkey -v
+# KEY BINDINGS
+bindkey -v                        #Vi bindings
+bindkey '^?' backward-delete-char #Fix backspace issue
+bindkey '^[[3~' delete-char       #Fix backspace issue
 
-#Share history between multiple shells
-setopt SHARE_HISTORY
-
-#Fix backspace issue
-bindkey '^?' backward-delete-char
-bindkey '^[[3~' delete-char
-
+# ALIASES
 alias st2='$HOME/Sublime\ Text\ 2/sublime_text'
+
+# EXPORTS
+export PATH="/usr/local/heroku/bin:$PATH"                   # Heroku toolkit
+export PATH="$HOME/.rbenv/bin:/var/lib/gems/1.8/bin/:$PATH"
+eval "$(rbenv init -)"
+export TERM="xterm-256color"                                # 256 color support
