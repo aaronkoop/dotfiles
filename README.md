@@ -7,21 +7,12 @@ npm -g install jshint
 
 # Font I use in most of my text editors
 sudo apt-get install ttf-inconsolata    
-
-# For vim plugin management
-git clone https://github.com/gmarik/vundle.git ~/.vim/bundle/vundle
 ```
 Copy the dot files. At some point I need to redo this properly with symlinking. For the time being, this script will simply copy the dotfiles into their respective directories and install any dependencies. The copying of files will overwrite everything, so please read what this script is doing before you run it!
 ```sh
 git clone https://github.com/aakoop/dotfiles.git ~/.dotfiles
 cd ~/.dotfiles
 sh install.sh
-```
-Optionally, install solarized palette on the terminal so vim terminal solarized works
-```sh
-git clone git://github.com/sigurdga/gnome-terminal-colors-solarized.git
-cd gnome-terminal-colors-solarized
-./solarize
 ```
 
 ## components
@@ -36,7 +27,10 @@ cd gnome-terminal-colors-solarized
   * livereload
 
 ### vim
-* Plugins are managed through Vundle. Install script will grab all of mine. Add your own to .vimrc and run :BundleInstall.
+* Plugins are managed through Vundle. Install script will grab all of mine.
+
+### tmux
+* .tmux.conf
 
 ### zsh 
-* Just my .zshrc file for oh-my-zsh
+* .zshrc file for oh-my-zsh
