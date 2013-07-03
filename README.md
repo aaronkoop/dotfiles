@@ -10,7 +10,7 @@ sudo apt-get install ttf-inconsolata
 ```
 Copy the dot files. At some point I need to redo this properly with symlinking. For the time being, this script will simply copy the dotfiles into their respective directories and install any dependencies. The copying of files will overwrite everything, so please read what this script is doing before you run it!
 ```sh
-git clone https://github.com/aakoop/dotfiles.git ~/.dotfiles
+git clone https://github.com/aaronkoop/dotfiles.git ~/.dotfiles
 cd ~/.dotfiles
 sh install.sh
 ```
