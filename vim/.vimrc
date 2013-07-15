@@ -11,9 +11,11 @@ Bundle 'scrooloose/syntastic'
 Bundle "pangloss/vim-javascript"
 Bundle "jnurmine/Zenburn"
 Bundle "kien/ctrlp.vim"
+Bundle 'bling/vim-airline'
 
 " PLUGINS SPECIFIC
 let g:EasyMotion_leader_key = '<Leader>'    " Change default from <Leader><Leader>
+set laststatus=2                            " Fix airline not appearing until startup
 
 " KEY MAPPINGS
 map <F1> :set hlsearch! hlsearch?<CR>           " Toggle higlight searching
