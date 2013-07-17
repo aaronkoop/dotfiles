@@ -8,7 +8,7 @@ npm -g install jshint
 # Font I use in most of my text editors
 sudo apt-get install ttf-inconsolata    
 ```
-Copy the dot files. At some point I need to redo this properly with symlinking. For the time being, this script will simply copy the dotfiles into their respective directories. The copying of files will overwrite everything, so please read what this script is doing before you run it!
+Copy and symlink
 ```sh
 git clone https://github.com/aaronkoop/dotfiles.git ~/.dotfiles
 cd ~/.dotfiles
