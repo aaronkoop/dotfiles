@@ -8,12 +8,15 @@ Bundle 'gmarik/vundle'
 Bundle 'tpope/vim-fugitive'
 Bundle 'Lokaltog/vim-easymotion'
 Bundle 'scrooloose/syntastic'
-Bundle "pangloss/vim-javascript"
-Bundle "jnurmine/Zenburn"
-Bundle "kien/ctrlp.vim"
+Bundle 'pangloss/vim-javascript'
+Bundle 'jnurmine/Zenburn'
+Bundle 'kien/ctrlp.vim'
 Bundle 'bling/vim-airline'
+Bundle 'scrooloose/nerdcommenter'
+Bundle 'scrooloose/nerdtree'
 
 " PLUGINS SPECIFIC
+map <C-n> :NERDTreeToggle<CR>               " Binding for NERDTree
 let g:EasyMotion_leader_key = '<Leader>'    " Change default from <Leader><Leader>
 set laststatus=2                            " Fix airline not appearing until startup
 
