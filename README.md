@@ -1,3 +1,5 @@
+## dotfiles
+My personal dotfiles for software I use on a regular basis. I highly recommend using git to host these as it makes setting up a new machine a breeze. 
 ## install
 
 Grab the following dependencies if you don't have them:
