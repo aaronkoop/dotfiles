@@ -14,9 +14,12 @@ Bundle 'kien/ctrlp.vim'
 Bundle 'bling/vim-airline'
 Bundle 'scrooloose/nerdcommenter'
 Bundle 'scrooloose/nerdtree'
+Bundle 'myusuf3/numbers.vim'
 
 " PLUGINS SPECIFIC
 map <C-n> :NERDTreeToggle<CR>               " Binding for NERDTree
+nnoremap <F7> :NumbersToggle<CR>
+nnoremap <F8> :NumbersOnOff<CR>
 let g:EasyMotion_leader_key = '<Leader>'    " Change default from <Leader><Leader>
 set laststatus=2                            " Fix airline not appearing until startup
 
