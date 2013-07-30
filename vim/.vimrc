@@ -1,20 +1,37 @@
-" VUNDLE
-filetype off
-filetype plugin indent on
-set rtp+=~/.vim/bundle/vundle/
-call vundle#rc()
-Bundle 'gmarik/vundle'
+if has('vim_starting')
+  set runtimepath+=~/.vim/bundle/neobundle.vim/
+endif
 
-Bundle 'tpope/vim-fugitive'
-Bundle 'Lokaltog/vim-easymotion'
-Bundle 'scrooloose/syntastic'
-Bundle 'pangloss/vim-javascript'
-Bundle 'jnurmine/Zenburn'
-Bundle 'kien/ctrlp.vim'
-Bundle 'bling/vim-airline'
-Bundle 'scrooloose/nerdcommenter'
-Bundle 'scrooloose/nerdtree'
-Bundle 'myusuf3/numbers.vim'
+call neobundle#rc(expand('~/.vim/bundle/'))
+
+" Let NeoBundle manage NeoBundle
+NeoBundleFetch 'Shougo/neobundle.vim'
+
+" Recommended to install
+" After install, turn shell ~/.vim/bundle/vimproc, (n,g)make -f your_machines_makefile
+NeoBundle 'Shougo/vimproc', {
+      \ 'build' : {
+      \     'windows' : 'make -f make_mingw32.mak',
+      \     'cygwin' : 'make -f make_cygwin.mak',
+      \     'mac' : 'make -f make_mac.mak',
+      \     'unix' : 'make -f make_unix.mak',
+      \    },
+      \ }
+
+NeoBundle 'tpope/vim-fugitive'
+NeoBundle 'Lokaltog/vim-easymotion'
+NeoBundle 'scrooloose/syntastic'
+NeoBundle 'pangloss/vim-javascript'
+NeoBundle 'jnurmine/Zenburn'
+" NeoBundle 'kien/ctrlp.vim'
+NeoBundle 'bling/vim-airline'
+NeoBundle 'scrooloose/nerdcommenter'
+NeoBundle 'scrooloose/nerdtree'
+NeoBundle 'myusuf3/numbers.vim'
+NeoBundle 'Shougo/unite.vim'
+
+filetype plugin indent on " Requred for NeoBundle
+NeoBundleCheck
 
 " PLUGINS SPECIFIC
 map <C-n> :NERDTreeToggle<CR>               " Binding for NERDTree
@@ -22,6 +39,14 @@ nnoremap <F7> :NumbersToggle<CR>
 nnoremap <F8> :NumbersOnOff<CR>
 let g:EasyMotion_leader_key = '<Leader>'    " Change default from <Leader><Leader>
 set laststatus=2                            " Fix airline not appearing until startup
+
+let g:unite_source_history_yank_enable = 1
+call unite#filters#matcher_default#use(['matcher_fuzzy'])
+nnoremap <leader>ft :Unite file_rec/async -start-insert -default-action=tabopen<CR>
+nnoremap <leader>fs :Unite file_rec/async -start-insert -default-action=split<CR>
+nnoremap <leader>fv :Unite file_rec/async -start-insert -default-action=vsplit<CR>
+nnoremap <leader>fc :Unite file_rec/async -start-insert<CR>
+nnoremap <leader>fy :Unite -buffer-name=yank history/yank<CR>
 
 " KEY MAPPINGS
 map <F1> :set hlsearch! hlsearch?<CR>           " Toggle higlight searching
@@ -59,7 +84,7 @@ set smartcase       " Don't ignore case if there is a capital letter
 set noerrorbells visualbell t_vb=
 autocmd GUIEnter * set visualbell t_vb=
 set nocompatible            " Behave like vim, not vi
-set autochdir               " Automatically change the current directory to current file
+" set autochdir               " Automatically change the current directory to current file
 
 " FONTS
 if has("gui_running")
