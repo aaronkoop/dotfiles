@@ -1,63 +1,14 @@
-# Path to your oh-my-zsh configuration.
-ZSH=$HOME/.oh-my-zsh
+#
+# Executes commands at the start of an interactive session.
+#
+# Authors:
+#   Sorin Ionescu <sorin.ionescu@gmail.com>
+#
 
-# Set name of the theme to load.
-# Look in ~/.oh-my-zsh/themes/
-# Optionally, if you set this to "random", it'll load a random theme each
-# time that oh-my-zsh is loaded.
-ZSH_THEME="robbyrussell"
+# Source Prezto.
+if [[ -s "${ZDOTDIR:-$HOME}/.zprezto/init.zsh" ]]; then
+  source "${ZDOTDIR:-$HOME}/.zprezto/init.zsh"
+fi
 
-# Example aliases
-# alias zshconfig="mate ~/.zshrc"
-# alias ohmyzsh="mate ~/.oh-my-zsh"
-
-# Set to this to use case-sensitive completion
-# CASE_SENSITIVE="true"
-
-# Comment this out to disable bi-weekly auto-update checks
-# DISABLE_AUTO_UPDATE="true"
-
-# Uncomment to change how many often would you like to wait before auto-updates occur? (in days)
-# export UPDATE_ZSH_DAYS=13
-
-# Uncomment following line if you want to disable colors in ls
-# DISABLE_LS_COLORS="true"
-
-# Uncomment following line if you want to disable autosetting terminal title.
-# DISABLE_AUTO_TITLE="true"
-
-# Uncomment following line if you want red dots to be displayed while waiting for completion
-# COMPLETION_WAITING_DOTS="true"
-
-# Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
-# Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
-# Example format: plugins=(rails git textmate ruby lighthouse)
-plugins=(git)
-
-#  INIT
-source $ZSH/oh-my-zsh.sh
+# Customize to your needs...
 . ~/.nvm/nvm.sh
-
-# MISC
-xinput set-prop "VirtualBox mouse integration" "Coordinate Transformation Matrix" 0.5 0 0 0 0.5 0 0 0 1.0 #Fix mint virtual box cursor jump bug
-xinput set-prop "VirtualBox mouse integration" "Coordinate Transformation Matrix" 1.0 0 0 0 1.0 0 0 0 1.0
-
-# HISTORY
-HISTFILE=~/.zsh_history
-HISTSIZE=1000
-SAVEHIST=1000
-setopt SHARE_HISTORY #Share history between multiple shells
-
-# KEY BINDINGS
-bindkey -v                        #Vi bindings
-bindkey '^?' backward-delete-char #Fix backspace issue
-bindkey '^[[3~' delete-char       #Fix backspace issue
-
-# ALIASES
-alias st2='$HOME/Sublime\ Text\ 2/sublime_text'
-
-# EXPORTS
-export PATH="/usr/local/heroku/bin:$PATH"                   # Heroku toolkit
-export PATH="$HOME/.rbenv/bin:/var/lib/gems/1.8/bin/:$PATH"
-eval "$(rbenv init -)"
-export TERM="xterm-256color"                                # 256 color support
