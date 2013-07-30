@@ -35,4 +35,4 @@ sh install.sh
 * .tmux.conf
 
 ### zsh 
-* .zshrc file for oh-my-zsh
+* Configs for prezto
