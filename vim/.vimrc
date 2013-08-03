@@ -42,10 +42,10 @@ set laststatus=2                            " Fix airline not appearing until st
 
 let g:unite_source_history_yank_enable = 1
 call unite#filters#matcher_default#use(['matcher_fuzzy'])
-nnoremap <leader>ft :Unite file_rec/async -start-insert -default-action=tabopen<CR>
-nnoremap <leader>fs :Unite file_rec/async -start-insert -default-action=split<CR>
-nnoremap <leader>fv :Unite file_rec/async -start-insert -default-action=vsplit<CR>
-nnoremap <leader>fc :Unite file_rec/async -start-insert<CR>
+nnoremap <leader>ft :Unite file_mru file_rec/async:! -start-insert -buffer-name=files -default-action=tabopen<<CR>
+nnoremap <leader>fs :Unite file_mru file_rec/async:! -start-insert -buffer-name=files -default-action=split<CR>
+nnoremap <leader>fv :Unite file_mru file_rec/async:! -start-insert -buffer-name=files -default-action=vsplit<CR>
+nnoremap <leader>fc :Unite file_mru file_rec/async:! -start-insert -buffer-name=files<CR>
 nnoremap <leader>fy :Unite -buffer-name=yank history/yank<CR>
 
 " KEY MAPPINGS

@@ -29,7 +29,7 @@ sh install.sh
   * livereload
 
 ### vim
-* Plugins are managed through Vundle. Install script will grab all of mine.
+* Plugins are managed through NeoBundle. Install script will grab all of mine.
 
 ### tmux
 * .tmux.conf
