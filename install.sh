@@ -3,7 +3,7 @@
 # A POSIX variable
 OPTIND=1         # Reset in case getopts has been used previously in the shell.
 
-while getopts "hsvpzt" opt; do
+while getopts "hsvzt" opt; do
   case "$opt" in
     h)echo "Specify which dotfiles to symlink. Also note you will need to backup and move existing files yourself otherwise symlinking will fail. I'm lazy, deal with it."
       echo "-s for sublime text2"
