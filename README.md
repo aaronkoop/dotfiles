@@ -9,12 +9,14 @@ npm -g install jshint
 
 # Font I use in most of my text editors
 sudo apt-get install ttf-inconsolata    
+
+# Visit https://github.com/sorin-ionescu/prezto for zsh and prezto setup
 ```
 Copy and symlink
 ```sh
 git clone https://github.com/aaronkoop/dotfiles.git ~/.dotfiles
 cd ~/.dotfiles
-sh install.sh
+sh install.sh -h
 ```
 
 ## components
