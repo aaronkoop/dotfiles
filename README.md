@@ -10,6 +10,8 @@ npm -g install jshint
 # Font I use in most of my text editors
 sudo apt-get install ttf-inconsolata    
 
+# or http://www.levien.com/type/myfonts/inconsolata.html to grab the .otf file on OSX
+
 # Visit https://github.com/sorin-ionescu/prezto for zsh and prezto setup
 ```
 Copy and symlink
