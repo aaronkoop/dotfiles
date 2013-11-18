@@ -10,7 +10,6 @@ while getopts "hsvpzt" opt; do
       echo "-v for vim" 
       echo "-z for zsh & prezto"
       echo "-t for tmux"
-      echo "-a for all"
       exit 0
       ;;
     s)ln -s ~/.dotfiles/sublimetext2/* ~/.config/sublime-text-2/Packages/User/
