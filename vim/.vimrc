@@ -22,7 +22,8 @@ NeoBundle 'tpope/vim-fugitive'
 NeoBundle 'Lokaltog/vim-easymotion'
 NeoBundle 'scrooloose/syntastic'
 NeoBundle 'pangloss/vim-javascript'
-NeoBundle 'jnurmine/Zenburn'
+NeoBundle 'altercation/vim-colors-solarized'
+" NeoBundle 'jnurmine/Zenburn'
 " NeoBundle 'kien/ctrlp.vim'
 NeoBundle 'bling/vim-airline'
 NeoBundle 'scrooloose/nerdcommenter'
@@ -70,8 +71,10 @@ set number              " Line numbers visible.
 set ruler               " Lower right corner numbers visible
 set foldmethod=syntax   " Folding behavior
 syntax enable
-set t_Co=256            " For color scheme to work in terminal
-colors zenburn  
+set background=dark
+colorscheme solarized
+" set t_Co=256            " For color scheme to work in terminal
+" colors zenburn  
 set cursorline          " highlight the current line
 
 " SEARCHING
@@ -87,17 +90,11 @@ set nocompatible            " Behave like vim, not vi
 " set autochdir               " Automatically change the current directory to current file
 
 " FONTS
-if has("gui_running")
-  if has("gui_gtk2")
-    set guifont=Inconsolata\ Medium\ 12
-  elseif has("gui_win32")
-    set guifont=Consolas:h11:cANSI
-  endif
-endif
+set guifont=Inconsolata\ Medium\ 13
 
-if &term =~ '256color'
+ " if &term =~ '256color'
   " Disable Background Color Erase (BCE) so that color schemes
   " work properly when Vim is used inside tmux and GNU screen.
   " See also http://snk.tuxfamily.org/log/vim-256color-bce.html
-  set t_ut=
-endif
+ " set t_ut=
+ " endif
