@@ -5,10 +5,15 @@ OPTIND=1         # Reset in case getopts has been used previously in the shell.
 
 while getopts "hsvzt" opt; do
   case "$opt" in
-    h)echo "Specify which dotfiles to symlink. Also note you will need to backup and move existing files yourself otherwise symlinking will fail. I'm lazy, deal with it."
+    h)echo "Specify which dotfiles to symlink." 
+      echo "    You will need to backup and move existing files yourself otherwise symlinking will fail."
+      echo "    Dependencies are noted below each option if any exist.\n"
       echo "-s for sublime text2"
       echo "-v for vim" 
+      echo "    install inconsolata font. 'sudo apt-get install ttf-inconsolata' or grab the .otf file from http://www.levien.com/type/myfonts/inconsolata.html"
+      echo "    install jshint for syntastic plugin. 'npm -g install jshint'"
       echo "-z for zsh & prezto"
+      echo "    install zsh and prezto. Visit https://github.com/sorin-ionescu/prezto for instructions."
       echo "-t for tmux"
       exit 0
       ;;

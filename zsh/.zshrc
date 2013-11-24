@@ -13,3 +13,5 @@ fi
 # Customize to your needs...
 set -o vi   # this shouldn't necessary, but prezto is being stupid
 . ~/.nvm/nvm.sh
+nvm alias default v0.10.22
+nvm use default

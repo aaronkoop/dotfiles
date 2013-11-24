@@ -1,20 +1,6 @@
 ## dotfiles
 My personal dotfiles for software I use on a regular basis. I highly recommend using git to host these as it makes setting up a new machine a breeze. 
 ## install
-
-Grab the following dependencies if you don't have them:
-```sh
-# For syntastic plugin
-npm -g install jshint                   
-
-# Font I use in most of my text editors
-sudo apt-get install ttf-inconsolata    
-
-# or http://www.levien.com/type/myfonts/inconsolata.html to grab the .otf file on OSX
-
-# Visit https://github.com/sorin-ionescu/prezto for zsh and prezto setup
-```
-Copy and symlink
 ```sh
 git clone https://github.com/aaronkoop/dotfiles.git ~/.dotfiles
 cd ~/.dotfiles
