@@ -11,7 +11,6 @@ if [[ -s "${ZDOTDIR:-$HOME}/.zprezto/init.zsh" ]]; then
 fi
 
 # Customize to your needs...
-set -o vi   # this shouldn't necessary, but prezto is being stupid
+set -o vi
 . ~/.nvm/nvm.sh
-nvm alias default v0.10.22
-nvm use default
+nvm use v0.10.22
