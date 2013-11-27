@@ -6,7 +6,6 @@ OPTIND=1         # Reset in case getopts has been used previously in the shell.
 while getopts "hsvzt" opt; do
   case "$opt" in
     h)echo "Specify which dotfiles to symlink." 
-      echo "    You will need to backup and move existing files yourself otherwise symlinking will fail."
       echo "    Dependencies are noted below each option if any exist.\n"
       echo "-s for sublime text2"
       echo "-v for vim" 
@@ -17,16 +16,16 @@ while getopts "hsvzt" opt; do
       echo "-t for tmux"
       exit 0
       ;;
-    s)ln -s ~/.dotfiles/sublimetext2/* ~/.config/sublime-text-2/Packages/User/
+    s)ln -svin ~/.dotfiles/sublimetext2/* ~/.config/sublime-text-2/Packages/User/
       ;;
-    v)ln -s ~/.dotfiles/vim/.vimrc ~/.vimrc
+    v)ln -svin ~/.dotfiles/vim/.vimrc ~/.vimrc
       # For vim plugin management
       git clone git://github.com/Shougo/neobundle.vim ~/.vim/bundle/neobundle.vim
       ;;
-    z)ln -s ~/.dotfiles/zsh/.zshrc ~/.zshrc
-      ln -s ~/.dotfiles/zsh/.zpreztorc ~/.zpreztorc
+    z)ln -svin ~/.dotfiles/zsh/.zshrc ~/.zshrc
+      ln -svin ~/.dotfiles/zsh/.zpreztorc ~/.zpreztorc
       ;;
-    t)ln -s ~/.dotfiles/tmux/.tmux.conf ~/.tmux.conf
+    t)ln -svin ~/.dotfiles/tmux/.tmux.conf ~/.tmux.conf
       ;;
   esac
 done
