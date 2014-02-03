@@ -69,7 +69,7 @@ set expandtab     " Tabs are now spaces
 " APPEARANCE
 set number              " Line numbers visible.
 set ruler               " Lower right corner numbers visible
-set foldmethod=syntax   " Folding behavior
+" set foldmethod=syntax   " Folding behavior
 syntax enable
 set background=dark
 colorscheme solarized
