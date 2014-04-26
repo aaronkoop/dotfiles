@@ -21,4 +21,4 @@ if [ -d "$HOME/bin" ] ; then
 fi
 
 [ -s $HOME/.nvm/nvm.sh ] && . $HOME/.nvm/nvm.sh # This loads NVM
-nvm use v0.10.22
+nvm use v0.11.12

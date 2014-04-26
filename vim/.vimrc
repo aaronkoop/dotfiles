@@ -59,6 +59,7 @@ map <F6> :set paste!<CR>                        " Toggle paste mode
 map <j> gj                                      " Up and down don't skip lines that wrapped
 map <k> gk
 map <leader>s :set spell!<CR>                   " Toggle spell check
+imap jk <Esc>
 
 " TABBING
 set tabstop=2
