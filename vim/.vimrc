@@ -2,7 +2,7 @@ if has('vim_starting')
   set runtimepath+=~/.vim/bundle/neobundle.vim/
 endif
 
-call neobundle#rc(expand('~/.vim/bundle/'))
+call neobundle#begin(expand('~/.vim/bundle/'))
 
 " Let NeoBundle manage NeoBundle
 NeoBundleFetch 'Shougo/neobundle.vim'
@@ -23,13 +23,15 @@ NeoBundle 'Lokaltog/vim-easymotion'
 NeoBundle 'scrooloose/syntastic'
 NeoBundle 'pangloss/vim-javascript'
 NeoBundle 'altercation/vim-colors-solarized'
-" NeoBundle 'jnurmine/Zenburn'
+NeoBundle 'jnurmine/Zenburn'
 " NeoBundle 'kien/ctrlp.vim'
 NeoBundle 'bling/vim-airline'
 NeoBundle 'scrooloose/nerdcommenter'
 NeoBundle 'scrooloose/nerdtree'
 NeoBundle 'myusuf3/numbers.vim'
 NeoBundle 'Shougo/unite.vim'
+
+call neobundle#end()
 
 filetype plugin indent on " Requred for NeoBundle
 NeoBundleCheck
@@ -73,9 +75,9 @@ set ruler               " Lower right corner numbers visible
 " set foldmethod=syntax   " Folding behavior
 syntax enable
 set background=dark
-colorscheme solarized
-" set t_Co=256            " For color scheme to work in terminal
-" colors zenburn  
+" colorscheme solarized
+set t_Co=256            " For color scheme to work in terminal
+colors zenburn  
 set cursorline          " highlight the current line
 
 " SEARCHING

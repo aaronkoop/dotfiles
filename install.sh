@@ -12,7 +12,9 @@ while getopts "hsvzt" opt; do
       echo "    install inconsolata font. 'sudo apt-get install ttf-inconsolata' or grab the .otf file from http://www.levien.com/type/myfonts/inconsolata.html"
       echo "    install jshint for syntastic plugin. 'npm -g install jshint'"
       echo "-z for zsh & prezto"
-      echo "    install zsh and prezto. Visit https://github.com/sorin-ionescu/prezto for instructions."
+      echo "    install iterm2 solarized theme"
+      echo "    install zsh and zsh-completions via homebrew"
+      echo "    install prezto. Visit https://github.com/sorin-ionescu/prezto for instructions."
       echo "-t for tmux"
       exit 0
       ;;

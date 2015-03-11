@@ -19,7 +19,6 @@ if [ -d "$HOME/bin" ] ; then
 fi
 
 [ -s $HOME/.nvm/nvm.sh ] && . $HOME/.nvm/nvm.sh # This loads NVM
-nvm use v0.11.12
 
 HISTFILE=~/.zsh_history
 HISTSIZE=1000
